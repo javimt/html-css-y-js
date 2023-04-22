@@ -26,11 +26,13 @@ nav {
 }
 .menu {
   display: none;
-}
-.logo {
   width: 40px;
   height: 40px;
+}
+.logo {
   margin: auto;
+  width: 50px;
+  height: 50px;
 }
 .navbar-left ul,
 .navbar-right ul {
