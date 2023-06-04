@@ -1,38 +1,82 @@
-.body {
+/* #root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 100%;
+
+  color-scheme: light dark;
+  color: #000000;
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: black;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #0d6efd;
+} 
+
+html {
+  width: 100%;
+}*/
+
+body {
+  padding-top: 0px;
+  margin: 0px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: row;
 }
 
 .sidebar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
-  background-color: #333;
+  background-color: yellowgreen;
   color: #fff;
   width: 200px;
   height: 100vh;
   padding: 20px;
+  border-radius: 5px;
 }
 
 .sidebar ul {
   list-style-type: none;
-  padding: 0;
+  padding: 5vh;
   margin: 0;
+  background-color: transparent;
+  
 }
 
 .sidebar ul li {
   margin-bottom: 10px;
+  background-color: transparent;
 }
 
 .sidebar ul li a {
+  display: block;
   color: #fff;
+  background: linear-gradient(to right,
+  rgb(22, 91, 180),
+  rgba(255, 255, 255, 0) 100%);
   text-decoration: none;
+  border-radius: 5px;
   transition: color 0.3s ease;
+  width: auto;
+  height: auto;
 }
 
 .sidebar ul li a:hover {
-  color: #ff6b6b;
+  color: yellowgreen;
 }
 
 
@@ -43,25 +87,29 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 16));
+    transform: translateX(calc(-348px * 16));
   }
+}
+.container1 {
+  color: blanchedalmond;
+  background-color: darkred;
+ /*  padding-top: 30px; */
+  padding-bottom: 30px;
 }
 .slider {
   background: transparent;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 57vh;
-  margin: 16.7vw;
-  padding-top: 0%;
+  /* justify-content: center;
+  align-items: center; */
   overflow: hidden;
-  position: absolute;
-  width: 82.45%;
-  border: solid lime 2px;
+  position: fixed;
+  width: 90%;
 }
 .slider::before,
 .slider::after {
   background: linear-gradient(
     to right,
-    rgb(24, 52, 211),
+    rgb(22, 91, 180),
     rgba(255, 255, 255, 0) 100%
   );
   content: "";
@@ -83,93 +131,173 @@
   padding: 10px;
 }
 .slider .slide_track {
-  animation: scroll 35s linear infinite;
+  animation: scroll 35s ease-in-out infinite alternate ;
   display: flex;
-  width: calc(250px * 16);
+  width: calc(348px * 16);
 }
 .slider .slide {
   height: 430px;
-  width: 430px;
+  width: 400px;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.slider :is(#img1, #img11) {
+.slider :is(#img1) {
   background-image: linear-gradient(
       to bottom,
-      rgba(20, 48, 202, 0.753),
+      rgba(65, 176, 219, 0.753),
       rgba(0, 0, 255, 0.199)
     ),
-    url("./assets/balon\ terapia.jpg");
+    url("./assets/pesas y otros/balon\ terapia.jpg");
 }
-.slider :is(#img2, #img22) {
+.slider :is(#img2) {
   background-image: linear-gradient(
       to bottom,
-      rgba(20, 48, 202, 0.753),
+      rgba(65, 176, 219, 0.753),
       rgba(0, 0, 255, 0.199)
     ),
-    url("./assets/banco\ pesas\ sencillo.jpg");
+    url("./assets/pesas y otros/banco\ pesas\ sencillo.jpg");
 }
-.slider :is(#img3, #img33) {
+.slider :is(#img3) {
   background-image: linear-gradient(
       to bottom,
-      rgba(20, 48, 202, 0.753),
+      rgba(65, 176, 219, 0.753),
       rgba(0, 0, 255, 0.199)
     ),
-    url("./assets/camibuso\ verde.jpg");
+    url("./assets/catalogo ropa/camibuso\ verde.jpg");
 }
 .slider :is(#img4, #img44) {
   background-image: linear-gradient(
       to bottom,
-      rgba(20, 48, 202, 0.753),
+      rgba(65, 176, 219, 0.753),
       rgba(0, 0, 255, 0.199)
     ),
-    url("./assets/cinturon.jpg");
+    url("./assets/accesorios gym/cinturon.jpg");
 }
-.slider :is(#img5, #img55) {
+.slider :is(#img5) {
   background-image: linear-gradient(
       to bottom,
-      rgba(20, 48, 202, 0.753),
+      rgba(65, 176, 219, 0.753),
       rgba(0, 0, 255, 0.199)
     ),
-    url("./assets/correr\ salud.jpg");
+    url("./assets/accesorios gym/correr\ salud.jpg");
 }
-.slider :is(#img6, #img66) {
+.slider :is(#img6) {
   background-image: linear-gradient(
       to bottom,
-      rgba(20, 48, 202, 0.753),
+      rgba(65, 176, 219, 0.753),
       rgba(0, 0, 255, 0.199)
     ),
-    url("./assets/guantes\ sencillos.jpg");
+    url("./assets/accesorios gym/guantes\ sencillos.jpg");
 }
-.slider :is(#img7, #img77) {
+.slider :is(#img7) {
   background-image: linear-gradient(
       to bottom,
-      rgba(20, 48, 202, 0.753),
+      rgba(65, 176, 219, 0.753),
       rgba(0, 0, 255, 0.199)
     ),
-    url("./assets/kit\ deportivo\ casero.jpg");
+    url("./assets/pesas y otros/kit\ deportivo\ casero.jpg");
 }
-.slider :is(#img8, #img88) {
+.slider :is(#img8) {
   background-image: linear-gradient(
       to bottom,
-      rgba(20, 48, 202, 0.753),
+      rgba(65, 176, 219, 0.753),
       rgba(0, 0, 255, 0.199)
     ),
-    url("./assets/kit\ mixtas.jpg");
+    url("./assets/catalogo ropa/kit\ mixtas.jpg");
 }
-:is(#img2, #img22, #img3, #img33, #img4, #img44, #img8, #img88) img {
+.slider :is(#img11) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(65, 176, 219, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/catalogo ropa/kit\ sudadera\ con\ camibuso\ hombre.jpg");
+}
+.slider :is(#img22) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(65, 176, 219, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/pesas y otros/kit\ fit\ casero.jpg");
+}
+.slider :is(#img33) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(65, 176, 219, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/pesas y otros/mixtos.jpg");
+}
+.slider :is(#img44) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(65, 176, 219, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/catalogo ropa/prendas\ mujer.jpg");
+}
+.slider :is(#img55) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(65, 176, 219, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/accesorios gym/hidratacion.jpg");
+}
+.slider :is(#img66) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(65, 176, 219, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/pesas Y otros/kit\ elasticos.jpg");
+}
+.slider :is(#img77) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(65, 176, 219, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/catalogo ropa/tennis\ con\ resortes.jpg");
+}
+.slider :is(#img88) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(65, 176, 219, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/tecnologia y accesorios/tecnologicos.jpeg");
+}
+/* :is(#img2, #img22, #img3, #img33, #img4, #img44, #img8, #img88) img {
   width: 50%;
   height: 55%;
-}
+} */
 .slider img {
   width: 50%;
   height: 55%;
 }
 /* ========================> FIN CARRUSEL <========================== */
 
-/* .menu {
-
-} */
+.container {
+  padding: 20px 0px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.footer {
+  justify-content: space-evenly;
+  color: red;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+} 
