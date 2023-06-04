@@ -38,15 +38,14 @@ body {
 }
 
 .sidebar {
-  position: relative;
+  /* position: relative; */
   top: 0;
   left: 0;
-  background-color: yellowgreen;
+  background: linear-gradient(to right, yellowgreen, rgba(355, 355, 355, 0) 100%);
   color: #fff;
   width: 200px;
   height: 100vh;
   padding: 20px;
-  border-radius: 5px;
 }
 
 .sidebar ul {
@@ -284,20 +283,22 @@ body {
 
 .container {
   padding: 20px 0px;
-  background-color: black;
   display: flex;
   align-items: center;
   min-height: 100vh;
 }
 .footer {
+  position: fixed;
+  background: linear-gradient(to top, rgb(7, 7, 7), rgba(355, 355, 355, 0) 100%);
   justify-content: space-evenly;
-  color: red;
   padding: 20px;
   text-align: center;
   display: flex;
   align-items: center;
-  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
 } 
+.footer h3 {
+  color: yellowgreen
+}
