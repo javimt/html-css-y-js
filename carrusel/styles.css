@@ -1,0 +1,140 @@
+/* .root {
+  color: blanchedalmond;
+  background-color: darkred;
+  padding-top: 30px;
+  padding-bottom: 30px;
+} */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 16));
+  }
+}
+.slider {
+  background: transparent;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 450px;
+  margin: 30px auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border: solid lime 5px;
+}
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    rgb(24, 52, 211),
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 450px;
+  position: absolute;
+  width: 300px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .con {
+  padding: 10px;
+}
+.slider .slide_track {
+  animation: scroll 35s linear infinite;
+  display: flex;
+  width: calc(250px * 16);
+}
+.slider .slide {
+  height: 430px;
+  width: 430px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider :is(#img1, #img11) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 48, 202, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/balon\ terapia.jpg");
+}
+.slider :is(#img2, #img22) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 48, 202, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/banco\ pesas\ sencillo.jpg");
+}
+.slider :is(#img3, #img33) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 48, 202, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/camibuso\ verde.jpg");
+}
+.slider :is(#img4, #img44) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 48, 202, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/cinturon.jpg");
+}
+.slider :is(#img5, #img55) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 48, 202, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/correr\ salud.jpg");
+}
+.slider :is(#img6, #img66) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 48, 202, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/guantes\ sencillos.jpg");
+}
+.slider :is(#img7, #img77) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 48, 202, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/kit\ deportivo\ casero.jpg");
+}
+.slider :is(#img8, #img88) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 48, 202, 0.753),
+      rgba(0, 0, 255, 0.199)
+    ),
+    url("./assets/kit\ mixtas.jpg");
+}
+:is(#img2, #img22, #img3, #img33, #img4, #img44, #img8, #img88) img {
+  width: 50%;
+  height: 55%;
+}
+.slider img {
+  width: 50%;
+  height: 55%;
+}
+/* ========================> FIN CARRUSEL <========================== */
+
+/* .menu {
+
+} */
