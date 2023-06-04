@@ -1,9 +1,43 @@
-/* .root {
-  color: blanchedalmond;
-  background-color: darkred;
-  padding-top: 30px;
-  padding-bottom: 30px;
-} */
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #ff6b6b;
+}
+
+
+/* =========================> CARRUSEL <========================== */
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -15,12 +49,13 @@
 .slider {
   background: transparent;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 450px;
-  margin: 30px auto;
+  height: 57vh;
+  margin: 16.7vw;
+  padding-top: 0%;
   overflow: hidden;
-  position: relative;
-  width: 100%;
-  border: solid lime 5px;
+  position: absolute;
+  width: 82.45%;
+  border: solid lime 2px;
 }
 .slider::before,
 .slider::after {
