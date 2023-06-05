@@ -34,6 +34,9 @@ html {
 }
 body {
   background: url(./image-gallery/fondos/fondo\ barra\ y\ discos.jpg);
+  /* background-repeat: no-repeat; */
+  background-position: bottom;
+  background-size: contain;
   padding-top: 0px;
   margin: 0px;
   display: flex;
@@ -61,16 +64,23 @@ body {
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .sidebar ul li {
   margin-top: 5vh;
   background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .sidebar ul li a {
   display: flex;
+  justify-content: left;
   align-items: center;
+  flex-wrap: wrap;
   color: #fff;
   background: linear-gradient(to right,
   rgb(22, 91, 180),
@@ -91,7 +101,8 @@ body {
   margin-top: 3vh;
   position: fixed;
   margin-bottom: 3vh;
-  /* cursor: pointer; */
+  display: flex;
+  flex-wrap: wrap ;
 }
 
 /* =========================> CARRUSEL <========================== */
@@ -123,13 +134,15 @@ body {
 .slider::after {
   background: linear-gradient(
     to right,
-    rgb(22, 91, 180),
-    rgba(255, 255, 255, 0) 100%
+    rgba(22, 90, 180, 0.829),
+    rgba(255, 255, 255, 0) 20%
   );
   content: "";
   height: 450px;
   position: absolute;
-  width: 300px;
+  /* display: flex;
+  justify-content: center; */
+  width: 100px;
   z-index: 2;
 }
 .slider::after {
@@ -145,7 +158,7 @@ body {
   padding: 10px;
 }
 .slider .slide_track {
-  animation: scroll 38s ease-in-out infinite alternate ;
+  animation: scroll 70s ease-in-out infinite alternate ;
   display: flex;
   width: calc(344.7px * 16);
 }
@@ -158,6 +171,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.slide :hover {
+  transform: scale(1.1);
+}
+.slider :hover {
+  animation-play-state: paused;
+  cursor: pointer;
+  
+  transition: step-end;
 }
 .slider :is(#img1) {
   background-image: linear-gradient(
@@ -306,7 +328,7 @@ body {
 } */
 .footer {
   position: fixed;
-  background: linear-gradient(to top, rgb(66, 65, 65), rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgb(8, 8, 8), rgba(0, 0, 0, 0) 105%);
   justify-content: space-evenly;
   padding: 20px;
   text-align: center;
@@ -321,9 +343,11 @@ body {
   color: rgb(186, 245, 68);
 }
 .footer p {
+  font-size: 20px;
   display: flex;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
   align-items: center;
   width: 55vh;
   color: rgb(32, 124, 245);
@@ -337,4 +361,50 @@ body {
 .contact img {
   margin: 20px;
   cursor: pointer;
+}
+
+.gallery {
+  text-align: center;
+  display: flex;
+  justify-content: center;align-items: center;
+}
+.thumbnails {
+  margin-top: 40vh;
+  display: flex;
+}
+.thumbnails img {
+  width: 100px;
+  height: 100px;/* 
+  object-fit: cover; */
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.thumbnails img:hover {
+  transform: scale(1.1);
+}
+.preview-container {
+  position: fixed ;
+  width: 40%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;/* 
+  margin-bottom: 100px; */
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+.preview-image {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
 }
