@@ -33,7 +33,7 @@ html {
   padding: 0;
 }
 body {
-  background-color: black;
+  background: url(./image-gallery/fondos/fondo\ barra\ y\ discos.jpg);
   padding-top: 0px;
   margin: 0px;
   display: flex;
@@ -101,7 +101,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-348px * 16));
+    transform: translateX(calc(-345.8px * 16));
   }
 }
 .container1 {
@@ -117,7 +117,7 @@ body {
   align-items: center; */
   overflow: hidden;
   position: fixed;
-  width: 90%;
+  width: 85.9%;
 }
 .slider::before,
 .slider::after {
@@ -145,13 +145,14 @@ body {
   padding: 10px;
 }
 .slider .slide_track {
-  animation: scroll 35s linear infinite alternate ;
+  animation: scroll 38s ease-in-out infinite alternate ;
   display: flex;
-  width: calc(348px * 16);
+  width: calc(344.7px * 16);
 }
 .slider .slide {
   height: 430px;
   width: 400px;
+  gap: 3px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -286,13 +287,13 @@ body {
     ),
     url("./image-gallery/tecnologia y accesorios/tecnologicos.jpeg");
 }
-/* :is(#img2, #img22, #img3, #img33, #img4, #img44, #img8, #img88) img {
-  width: 50%;
-  height: 55%;
-} */
+:is(#img3, #img5, #img44, #img1, #img55, #img33, #img7, #img77,/*  #img8, #img88 */) img {
+  width: 59%;
+  height: 50%;
+}
 .slider img {
   width: 50%;
-  height: 50%;
+  height: 55%;
 }
 /* ========================> FIN CARRUSEL <========================== */
 
@@ -325,7 +326,7 @@ body {
   text-align: center;
   align-items: center;
   width: 55vh;
-  color: rgb(22, 91, 180);
+  color: rgb(32, 124, 245);
   margin-bottom: 2vh;
 }
 .contact {
@@ -337,12 +338,3 @@ body {
   margin: 20px;
   cursor: pointer;
 }
-/* .footer .about p{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 50vh;
-  color: rgb(22, 91, 180);
-  margin-bottom: 3vh;
-} */
