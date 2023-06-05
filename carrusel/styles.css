@@ -22,12 +22,16 @@ a {
 }
 a:hover {
   color: #0d6efd;
-} 
+}*/ 
 
 html {
-  width: 100%;
-}*/
-
+  font-size: 90%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   padding-top: 0px;
   margin: 0px;
@@ -39,45 +43,54 @@ body {
 
 .sidebar {
   /* position: relative; */
+  display: flex;
+  justify-content: center;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, yellowgreen, rgba(355, 355, 355, 0) 100%);
+  background: linear-gradient(to bottom, yellowgreen, rgba(355, 255, 355, 0) 100%);
   color: #fff;
-  width: 200px;
+  width: 14vw;
   height: 100vh;
-  padding: 20px;
+  padding: 5px;
 }
 
 .sidebar ul {
   list-style-type: none;
-  padding: 5vh;
-  margin: 0;
+  margin-top: 13vh;
   background-color: transparent;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar ul li {
-  margin-bottom: 10px;
+  margin-top: 5vh;
   background-color: transparent;
 }
 
 .sidebar ul li a {
-  display: block;
+  display: flex;
+  align-items: center;
   color: #fff;
   background: linear-gradient(to right,
   rgb(22, 91, 180),
-  rgba(255, 255, 255, 0) 100%);
+  rgba(255, 255, 255, 0) 130%);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: color 0.3s ease;
-  width: auto;
-  height: auto;
+  width: 15vh;
+  height: 5vh;
+  padding-left: 5px;
 }
 
 .sidebar ul li a:hover {
-  color: yellowgreen;
+  color: rgb(186, 245, 68);
 }
 
+.image {
+  margin-top: 3vh;
+  position: fixed;
+  margin-bottom: 3vh;
+}
 
 /* =========================> CARRUSEL <========================== */
 
@@ -130,7 +143,7 @@ body {
   padding: 10px;
 }
 .slider .slide_track {
-  animation: scroll 35s ease-in-out infinite alternate ;
+  animation: scroll 35s linear infinite alternate ;
   display: flex;
   width: calc(348px * 16);
 }
@@ -167,7 +180,7 @@ body {
     ),
     url("./assets/catalogo ropa/camibuso\ verde.jpg");
 }
-.slider :is(#img4, #img44) {
+.slider :is(#img4) {
   background-image: linear-gradient(
       to bottom,
       rgba(65, 176, 219, 0.753),
@@ -277,19 +290,20 @@ body {
 } */
 .slider img {
   width: 50%;
-  height: 55%;
+  height: 50%;
 }
 /* ========================> FIN CARRUSEL <========================== */
 
-.container {
+/* .container {
   padding: 20px 0px;
   display: flex;
   align-items: center;
   min-height: 100vh;
-}
+  height: 15vh ;
+} */
 .footer {
   position: fixed;
-  background: linear-gradient(to top, rgb(7, 7, 7), rgba(355, 355, 355, 0) 100%);
+  background: linear-gradient(to top, rgb(7, 7, 7), rgba(0, 0, 0, 0) 135%);
   justify-content: space-evenly;
   padding: 20px;
   text-align: center;
@@ -298,7 +312,11 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 20vh;
 } 
 .footer h3 {
-  color: yellowgreen
+  color: rgb(238, 243, 248);
+}
+.footer h3:hover {
+  cursor: pointer;
 }
