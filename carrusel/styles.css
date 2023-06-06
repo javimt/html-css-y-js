@@ -54,8 +54,7 @@ body {
   background: linear-gradient(to bottom, yellowgreen, rgba(355, 255, 355, 0) 100%);
   color: #fff;
   width: 14vw;
-  height: 100vh;
-  padding: 5px;
+  height: auto;
 }
 
 .sidebar ul {
@@ -102,6 +101,8 @@ body {
   position: fixed;
   margin-bottom: 3vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap ;
 }
 
@@ -112,15 +113,15 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-345.8px * 16));
+    transform: translateX(calc(-247px * 16));
   }
 }
-.container1 {
+/*.container1 {
   color: blanchedalmond;
   background-color: darkred;
- /*  padding-top: 30px; */
+ padding-top: 30px; 
   padding-bottom: 30px;
-}
+}*/
 .slider {
   background: transparent;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
@@ -138,7 +139,7 @@ body {
     rgba(255, 255, 255, 0) 20%
   );
   content: "";
-  height: 450px;
+  height: 350px;
   position: absolute;
   /* display: flex;
   justify-content: center; */
@@ -160,11 +161,11 @@ body {
 .slider .slide_track {
   animation: scroll 70s ease-in-out infinite alternate ;
   display: flex;
-  width: calc(344.7px * 16);
+  width: calc(247px * 16);
 }
 .slider .slide {
-  height: 430px;
-  width: 400px;
+  height: 330px;
+  width: 300px;
   gap: 3px;
   background-size: cover;
   background-position: center;
@@ -360,45 +361,56 @@ body {
 }
 .contact img {
   margin: 20px;
+}
+.contact img :hover {
   cursor: pointer;
 }
 
 .gallery {
   text-align: center;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .thumbnails {
-  margin-top: 40vh;
+  margin-top: 26vh;
   display: flex;
 }
 .thumbnails img {
-  width: 100px;
-  height: 100px;/* 
-  object-fit: cover; */
-  margin: 5px;
+  width: 130px;
+  height: 110px;
+  object-fit: cover;
+  margin-left: 23px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  margin-bottom: 50px;
 }
 .thumbnails img:hover {
   transform: scale(1.1);
 }
+
 .preview-container {
-  position: fixed ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40%;
   height: 40%;
   background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-wrap: wrap;
   box-sizing: border-box;
-  justify-content: center;
-  align-items: center;/* 
-  margin-bottom: 100px; */
+  position: fixed;
+  margin-bottom: 22vh;
 }
+/* .preview-h3 {
+  color: rgb(32, 124, 245);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5px;
+} */
 .close {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 5px;
   color: #fff;
   font-size: 30px;
   cursor: pointer;

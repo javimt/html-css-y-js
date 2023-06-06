@@ -124,17 +124,23 @@
   
   <div class="gallery">
     <div class="thumbnails">
-      <img src="image-gallery/accesorios gym/hidratacion.jpg" alt="Imagen 1" onclick="openPreview(this)">
-      <img src="image-gallery/catalogo ropa/kit mixtas.jpg" alt="Imagen 2" onclick="openPreview(this)">
-      <img src="image-gallery/pesas y otros/kit deportivo casero.jpg" alt="Imagen 3" onclick="openPreview(this)">
-      <img src="image-gallery/tecnologia y accesorios/tecnologicos.jpeg" alt="Imagen 4" onclick="openPreview(this)">
-      <img src="image-gallery/accesorios gym/cinturon.jpg" alt="Imagen 5" onclick="openPreview(this)">
-      <img src="image-gallery/catalogo ropa/tennis con resortes.jpg" alt="Imagen 6" onclick="openPreview(this)">
+        <img src="image-gallery/accesorios gym/hidratacion.jpg" alt="Imagen 1" onclick="openPreview(event, 'image-gallery/accesorios gym/hidratacion.jpg')">
+        <img src="image-gallery/catalogo ropa/kit mixtas.jpg" alt="Imagen 2" onclick="openPreview(event, 'image-gallery/catalogo ropa/kit mixtas.jpg')">
+        <img src="image-gallery/pesas y otros/kit deportivo casero.jpg" alt="Imagen 3" onclick="openPreview(event, 'image-gallery/pesas y otros/kit deportivo casero.jpg')">
+        <img src="image-gallery/tecnologia y accesorios/tecnologicos.jpeg" alt="Imagen 4" onclick="openPreview(event, 'image-gallery/tecnologia y accesorios/tecnologicos.jpeg')">
+        <img src="image-gallery/accesorios gym/cinturon.jpg" alt="Imagen 5" onclick="openPreview(event, 'image-gallery/accesorios gym/cinturon.jpg')">
+        <img src="image-gallery/catalogo ropa/tennis con resortes.jpg" alt="Imagen 6" onclick="openPreview(event, 'image-gallery/catalogo ropa/tennis con resortes.jpg')">
     </div>
 
     <div class="preview-container">
-      <span class="close" onclick="closePreview()">&times;</span>
+      <span class="close" onclick="closePreview()"><strong>X</strong></span>
       <img class="preview-image" src="" alt="">
+     <!--  <br>
+      <h3 class="preview-h3">Price: </h3>
+      <br>
+      <h3 class="preview-h3">Size: </h3>
+      <br>
+      <h3 class="preview-h3">color: </h3> -->
     </div>
   </div>
 
